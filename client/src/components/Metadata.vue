@@ -86,14 +86,7 @@ export default {
 
       this.metadataList.forEach(object => {
         if (object.key.length > 0) {
-          if (!isNaN(object.value))
-            metadata[object.key] = parseInt(object.value);
-          else if (
-            object.value.toLowerCase() === "true" ||
-            object.value.toLowerCase() === "false"
-          )
-            metadata[object.key] = object.value.toLowerCase() === "true";
-          else metadata[object.key] = object.value;
+          metadata[object.key] = object.value;
         }
       });
 
